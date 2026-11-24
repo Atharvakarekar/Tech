@@ -241,9 +241,9 @@ blockquote footer b { color: #fff; }
   .award.featured { transform: none; }
 }
 @media (max-width: 860px) {
-  .nav-links { position: fixed; inset: 72px 0 auto 0; flex-direction: column; gap: 0; background: #fff; color: var(--ink); padding: 1rem 4%; box-shadow: 0 20px 40px -20px rgba(0,0,0,.3); transform: translateY(-120%); transition: transform .35s; z-index: -1; }
+  .nav-links { position: fixed; inset: 72px 0 auto 0; flex-direction: column; gap: 0; background: #fff; color: var(--ink); padding: 1rem 4%; box-shadow: 0 20px 40px -20px rgba(0,0,0,.3); transform: translateY(calc(-100% - 80px)); visibility: hidden; transition: transform .35s, visibility .35s; z-index: -1; }
   .nav-links a { padding: .9rem 0; border-bottom: 1px solid var(--line); opacity: 1; }
-  .nav-links.open { transform: none; }
+  .nav-links.open { transform: none; visibility: visible; }
   .nav-toggle { display: block; color: inherit; }
   .nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(4px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:last-child { transform: translateY(-4px) rotate(-45deg); }
